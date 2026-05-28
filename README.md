@@ -3,7 +3,7 @@
 ## Ideia básica
 As variáveis não devem ser acessadas em qualquer local, e se forem é normal precisarem ser acessadas e modificadas de maneira controlada, por exemplo:
 
-`
+```
 class Pessoa {
     // A idade, logicamente, não deve ser negativa
     int _idade
@@ -26,9 +26,9 @@ class Pessoa {
         }
     }
 }
-`
+```
 
-`
+```
 // Se a variável não for privada, ela pode ser acessada de qualquer maneira
 void main () {
     Pessoa davi = Pessoa();
@@ -38,6 +38,6 @@ void main () {
 class Pessoa {
     int idade;
 }
-`
+```
 
 As vezes não queremos que a variável seja modificada, nesse caso só precisamos não adicionar o 'set', ou que ela não seja lida, etc.
