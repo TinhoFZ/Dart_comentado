@@ -7,22 +7,19 @@ Produto mesa = Produto('mesa', 200, 10);
 Produto celular = Produto('celular', 2500, 3);
 
 
+// Por mais que visualmente pareça o mesmo, o nome é do produto é privado, e pode ser formatado de diferentes maneiras, além de ser seguro.
 celular.nome = 'redmi note 14';
-
-print(celular.nome);
-
-
+celular.preco = -2500;
+celular.quantidade = -3;
 
 
-vaso.mostrarDados();
-mesa.mostrarDados();
-celular.mostrarDados();
-mesa.calcularTotal();
-vaso.calcularTotal();
+
+
+  
 }
 class Produto {
 
-
+// No momento, apenas o _nome é privado, e os outros podem ser acessados diretamente.
 String _nome;
 double preco;
 int quantidade;
@@ -44,9 +41,10 @@ return _nome;
 
 
 set nome (var nome) {
-
+//Isso é um exemplo de algo que pode ser feito quando a variável é modificada por meio de um set ao invés de diretamente
+print('O nome do produto era $_nome');
 _nome = nome ;
-
+print('O nome do produto agora é $_nome');
 
 }
 
